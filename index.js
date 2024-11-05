@@ -16,9 +16,9 @@ const socketio=require('socket.io');
 
         //so there are some different diffrenet fucntion used to serve the response 
         //check it out("_")
-         io.emit('msg_rcvd',data);//this function provide by socket
+         //io.emit('msg_rcvd',data);//this function provide by socket
          //socket.emit('msg_rcvd',data);//only serve to itself
-        //socket.broadcast.emit('msg_rcvd',data);//serve to other connectd client except itslelf
+        socket.broadcast.emit('msg_rcvd',data);//serve to other connectd client except itslelf
     });
 
     // //ctach client emmit

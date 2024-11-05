@@ -9,20 +9,14 @@
 </head>
 <body>
     <div class="chat-app">
-        <div class="chat-window">
-            <div class="header">
-                <h2>Chit-Chat</h2>
-            </div>
-            <ul id="msglist" class="messages">
-                <!-- Messages will be appended here -->
-            </ul>
-            <div class="input-container">
-                <input type="text" id="newmsg" placeholder="Write a message...">
-                <button id="btn">Send</button>
-            </div>
+        <div class="header">Chat</div>
+        <ul class="messages" id="msglist"></ul>
+        <div class="input-container">
+          <input type="text" id="newmsg" placeholder="Type a message..." />
+          <button id="btn">Send</button>
         </div>
-    </div>
-
+      </div>
+      
     <script src="socket.io/socket.io.js"></script>
     <script src="script.js"></script>
 </body>
