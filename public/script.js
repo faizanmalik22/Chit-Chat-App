@@ -13,6 +13,24 @@ let msglist=document.getElementById('msglist');
 //     })
 // }
 
+// Function to scroll to the bottom of the message list
+function scrollToBottom() {
+  msglist.scrollTop = msglist.scrollHeight; // Scroll to the bottom
+}
+
+
+//for enter key press 
+// Execute a function when the user presses a key on the keyboard
+input.addEventListener("keypress", function(event) {
+    // If the user presses the "Enter" key on the keyboard
+    if (event.key === "Enter") {
+      // Cancel the default action, if needed
+      event.preventDefault();
+      // Trigger the button element with a click
+      document.getElementById("btn").click();
+    }
+  });
+
 //chatgpt
 btn.onclick = function exec() {
     // Send the message
@@ -28,6 +46,7 @@ socket.on('msg_rcvd',(data)=>{
     let limsg=document.createElement('li');
     limsg.innerText=data.msg;
     msglist.appendChild(limsg);
+    scrollToBottom(); // Scroll to the bottom after appending the new message
 })
 
 

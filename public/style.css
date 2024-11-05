@@ -136,3 +136,12 @@ body {
         font-size: 1.2em;
     }
 }
+#msglist {
+    height: 400px; /* Set a fixed height for the chat area */
+    overflow-y: auto; /* Enable vertical scrolling */
+    list-style-type: none; /* Remove bullet points from the list */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Use flexbox for layout if needed */
+    flex-direction: column-reverse; /* This reverses the order of items displayed */
+}
+
