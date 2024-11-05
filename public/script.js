@@ -13,13 +13,7 @@ let msglist=document.getElementById('msglist');
 //     })
 // }
 
-// Function to scroll to the bottom of the message list
-function scrollToBottom() {
-  msglist.scrollTop = msglist.scrollHeight; // Scroll to the bottom
-}
 
-
-//for enter key press 
 // Execute a function when the user presses a key on the keyboard
 input.addEventListener("keypress", function(event) {
     // If the user presses the "Enter" key on the keyboard
@@ -30,7 +24,7 @@ input.addEventListener("keypress", function(event) {
       document.getElementById("btn").click();
     }
   });
-
+  
 //chatgpt
 btn.onclick = function exec() {
     // Send the message
